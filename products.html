@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products | Duro Colors Private Limited</title>
+  <meta name="description"
+    content="Discover Duerow Colors' premium paints, primers, putty, tile grout, adhesives and epoxy coatings, manufactured with technology from Regent Paints Inc., USA." />
+  <link rel="canonical" href="https://www.duerowcolors.com/products.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="images/logo.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#101728',
+            paper: '#F4F6FA',
+            navy: { 50: '#EEF1F7', 100: '#D7DDEA', 300: '#8592B0', 500: '#2C3B5E', 600: '#1E2A46', 700: '#161F35', 800: '#101728', 900: '#0A0F1C' },
+            brand: { 50: '#E6FBFC', 100: '#C7F5F8', 200: '#96EBF2', 300: '#5FDCE8', 400: '#33C9DA', 500: '#12B8C9', 600: '#0E93A1', 700: '#0B7380', 800: '#0A5A64' },
+            clay: { DEFAULT: '#D9642F', light: '#F2914F', dark: '#A8481E' },
+            gold: '#C99A4E',
+          },
+          fontFamily: { display: ['Fraunces', 'serif'], body: ['Inter', 'sans-serif'] },
+          boxShadow: { soft: '0 10px 40px -12px rgba(10,15,28,0.35)', card: '0 8px 24px -8px rgba(10,15,28,0.15)' },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F4F6FA;
+      color: #101728;
+    }
+
+    .font-display {
+      font-family: 'Fraunces', serif;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .hero-splash {
+      background:
+        radial-gradient(circle at 12% 25%, rgba(217, 100, 47, 0.55), transparent 42%),
+        radial-gradient(circle at 82% 20%, rgba(18, 184, 201, 0.5), transparent 45%),
+        radial-gradient(circle at 55% 85%, rgba(201, 154, 78, 0.35), transparent 45%),
+        radial-gradient(circle at 30% 70%, rgba(18, 184, 201, 0.25), transparent 40%),
+        #0A0F1C;
+    }
+
+    #nav-main {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #navbar.scrolled #nav-main {
+      background-color: rgba(10, 15, 28, 0.97);
+      box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    #mobile-menu {
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    [data-reveal].reveal-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .card-hover {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px -15px rgba(10, 15, 28, 0.25);
+    }
+
+    .carousel-track {
+      display: flex;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+
+    .carousel-track:active {
+      cursor: grabbing;
+    }
+
+    .carousel-slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2.75rem;
+      width: 2.75rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(10, 15, 28, 0.08);
+      box-shadow: 0 6px 18px -6px rgba(10, 15, 28, 0.35);
+      transition: background 0.2s ease;
+      z-index: 10;
+    }
+
+    .carousel-prev:hover,
+    .carousel-next:hover {
+      background: #fff;
+    }
+
+    .carousel-prev {
+      left: 1rem;
+    }
+
+    .carousel-next {
+      right: 1rem;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+
+    .carousel-dot {
+      height: 0.55rem;
+      width: 0.55rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(10, 15, 28, 0.15);
+      transition: width 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      width: 1.5rem;
+      background: #0E93A1;
+      border-color: #0E93A1;
+    }
+
+    .carousel--dark .carousel-prev,
+    .carousel--dark .carousel-next {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .carousel--dark .carousel-prev:hover,
+    .carousel--dark .carousel-next:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .carousel--dark .carousel-prev svg,
+    .carousel--dark .carousel-next svg {
+      stroke: #fff;
+    }
+
+    .carousel--dark .carousel-dot {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .carousel--dark .carousel-dot.active {
+      background: #33C9DA;
+      border-color: #33C9DA;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-brand-600 text-white px-4 py-2 rounded-md z-50">Skip
+    to content</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-40">
+    <div class="hidden sm:block bg-navy-900 text-white/70 text-xs">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-9 flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="mailto:duerowpaints@gmail.com"
+            class="flex items-center gap-1.5 hover:text-brand-300 transition-colors"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-10 6L2 7" />
+            </svg>duerowpaints@gmail.com</a>
+          <a href="tel:+919416041413" class="flex items-center gap-1.5 hover:text-brand-300 transition-colors"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>+91 94160-41413</a>
+        </div>
+        <div class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>Mon - Sat | 9:00 AM - 6:00 PM</div>
+      </div>
+    </div>
+    <nav id="nav-main" class="bg-navy-900/90 backdrop-blur border-b border-white/5" aria-label="Primary">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo.png" alt="Duerow Logo"
+            class="h-24 sm:h-24 md:h-32 lg:h-32 xl:h-48 w-auto object-contain" />
+        </a>
+        <ul class="hidden md:flex items-center gap-9 font-semibold text-xs tracking-widest uppercase text-white/75">
+          <li><a href="index.html" class="nav-link hover:text-brand-300 transition-colors" data-page="index">Home</a>
+          </li>
+          <li><a href="about.html" class="nav-link hover:text-brand-300 transition-colors" data-page="about">About
+              Us</a></li>
+          <li><a href="products.html" class="nav-link hover:text-brand-300 transition-colors"
+              data-page="products">Products</a></li>
+          <li><a href="contact.html" class="nav-link hover:text-brand-300 transition-colors"
+              data-page="contact">Contact</a></li>
+        </ul>
+        <a href="contact.html"
+          class="hidden md:inline-flex items-center gap-2 bg-brand-500 text-navy-900 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-400 transition-colors">Get
+          a Quote</a>
+        <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"
+          class="md:hidden relative h-10 w-10 flex flex-col items-center justify-center gap-1.5 rounded-full border border-white/20">
+          <span class="hamburger-line block h-0.5 w-5 bg-white transition-transform"></span>
+          <span class="hamburger-line block h-0.5 w-5 bg-white transition-opacity"></span>
+          <span class="hamburger-line block h-0.5 w-5 bg-white transition-transform"></span>
+        </button>
+      </div>
+      <div id="mobile-menu"
+        class="md:hidden max-h-0 opacity-0 overflow-hidden bg-navy-800/98 backdrop-blur-md border-t border-white/10">
+        <ul class="flex flex-col gap-1 px-6 py-4 font-semibold text-sm uppercase tracking-wide text-white/85">
+          <li><a href="index.html" class="block py-3 border-b border-white/10">Home</a></li>
+          <li><a href="about.html" class="block py-3 border-b border-white/10">About Us</a></li>
+          <li><a href="products.html" class="block py-3 border-b border-white/10">Products</a></li>
+          <li><a href="contact.html" class="block py-3">Contact</a></li>
+        </ul>
+        <div class="px-6 pb-6"><a href="contact.html"
+            class="block text-center bg-brand-500 text-navy-900 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-widest">Get
+            a Quote</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="pt-20 sm:pt-[116px]">
+    <!-- ===================== PAGE HERO BANNER ===================== -->
+    <section class="hero-splash py-20 sm:py-28 text-center" data-reveal>
+      <div class="max-w-3xl mx-auto px-5">
+        <h1 class="font-display text-4xl sm:text-5xl font-bold text-white">Products <span class="text-brand-300">Duerow
+            Paints</span></h1>
+        <p class="mt-4 text-white/60">Crafting premium colors since 2007 with American excellence.</p>
+        <div class="mt-6 flex items-center justify-center gap-2 text-xs text-white/50 uppercase tracking-widest">
+          <a href="index.html" class="hover:text-brand-300 transition-colors">Home</a><span>/</span><span
+            class="text-brand-300">Products</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OUR PRODUCTS ===================== -->
+    <section class="py-20 sm:py-28 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+          <h2 class="font-display text-4xl sm:text-5xl font-bold text-ink tracking-tight">Our Premium Products</h2>
+          <p class="mt-5 text-lg text-ink/70 leading-relaxed">
+            Discover our range of high-quality solutions designed to meet all your needs.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Product 1 -->
+          <article
+            class="group bg-white rounded-lg overflow-hidden shadow-lg border border-navy-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            data-reveal>
+            <div class="h-64 bg-navy-800 overflow-hidden relative">
+              <img src="images/semi_Gloss.jpeg" alt="Duerow Semi Gloss Luxury Emulsion"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy" />
+            </div>
+
+            <div class="p-8">
+              <h3 class="font-display text-2xl font-semibold text-ink">
+                Duerow Semi Gloss Luxury Emulsion
+              </h3>
+
+              <p class="mt-4 text-base text-ink/70 leading-relaxed">
+                Duerow Semi Gloss Luxury Emulsion is an Weather Proof Emulsion with Dust Proof and High Sheen Properties at Reasonable Cost.
+              </p>
+
+              <div class="mt-6 rounded-xl bg-gray-50 border border-gray-200 p-5">
+                <h4 class="text-lg font-semibold text-ink mb-4">Product Features</h4>
+
+                <div class="space-y-3">
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Finish</span>
+                    <span class="font-semibold">High Sheen</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Washability</span>
+                    <span class="font-semibold">Excellent</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Coverage</span>
+                    <span class="font-semibold">100–110 sq.ft/L/Coat</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article
+            class="group bg-white rounded-lg overflow-hidden shadow-lg border border-navy-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            data-reveal>
+
+            <div class="h-64 bg-navy-800 overflow-hidden relative">
+              <img src="images/luxury_Emulsion_Matt.jpeg"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="">
+            </div>
+
+            <div class="p-8">
+
+              <h3 class="font-display text-2xl font-semibold text-ink">
+                Duerow Luxury Emulsion Matt Finesh
+              </h3>
+
+              <p class="mt-4 text-base text-ink/70 leading-relaxed">
+                Duerow Luxury Emulsion Matt is a weather proof emulsion with dust-proof & silky mat finesh properties at a reasonable cost.
+              </p>
+
+              <div class="mt-6 rounded-xl bg-gray-50 border border-gray-200 p-5">
+
+                <h4 class="text-lg font-semibold mb-4">
+                  Product Features
+                </h4>
+
+                <div class="space-y-3">
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Finish</span>
+                    <span class="font-semibold">Silky Matt</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Washability</span>
+                    <span class="font-semibold">Excellent</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Coverage</span>
+                    <span class="font-semibold">100–110 sq.ft/L/Coat</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Product 3 -->
+          <article
+            class="group bg-white rounded-lg overflow-hidden shadow-lg border border-navy-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            data-reveal>
+
+            <div class="h-64 bg-navy-800 overflow-hidden relative">
+              <img src="images/rich_Matt.jpeg"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="">
+            </div>
+
+            <div class="p-8">
+
+              <h3 class="font-display text-2xl font-semibold text-ink">
+                Duerow Luxury Rich Matt Emulsion
+              </h3>
+
+              <p class="mt-4 text-base text-ink/70 leading-relaxed">
+                Duerow Luxury Rich Matt Emulsion is an weather proof emulsion with dust-proof & rich mat finesh properties at reasonable cost.
+              </p>
+
+              <div class="mt-6 rounded-xl bg-gray-50 border border-gray-200 p-5">
+
+                <h4 class="text-lg font-semibold mb-4">
+                  Product Features
+                </h4>
+
+                <div class="space-y-3">
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Finish</span>
+                    <span class="font-semibold">Rich Matt</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Washability</span>
+                    <span class="font-semibold">Good</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Coverage</span>
+                    <span class="font-semibold">80–100 sq.ft/L/Coat</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Product 4 -->
+          <article
+            class="group bg-white rounded-lg overflow-hidden shadow-lg border border-navy-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            data-reveal>
+
+            <div class="h-64 bg-navy-800 overflow-hidden relative">
+              <img src="images/eco_Emulsion.jpeg"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="">
+            </div>
+
+            <div class="p-8">
+
+              <h3 class="font-display text-2xl font-semibold text-ink">
+                Duerow Eco Emulsion
+              </h3>
+
+              <p class="mt-4 text-base text-ink/70 leading-relaxed">
+                Duerow Eco Emulsion is an weather proof emulsion with dust-proof & rich mat finesh properties at reasonable cost.
+              </p>
+
+              <div class="mt-6 rounded-xl bg-gray-50 border border-gray-200 p-5">
+
+                <h4 class="text-lg font-semibold mb-4">
+                  Product Features
+                </h4>
+
+                <div class="space-y-3">
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Finish</span>
+                    <span class="font-semibold">Matt</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Washability</span>
+                    <span class="font-semibold">Good</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Coverage</span>
+                    <span class="font-semibold">80–100 sq.ft/L/Coat</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Product 5 -->
+          <article
+            class="group bg-white rounded-lg overflow-hidden shadow-lg border border-navy-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            data-reveal>
+
+            <div class="h-64 bg-navy-800 overflow-hidden relative">
+              <img src="images/acrylic_Exterior.jpeg"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="">
+            </div>
+
+            <div class="p-8">
+
+              <h3 class="font-display text-2xl font-semibold text-ink">
+                Duerow Exterior Primer
+              </h3>
+
+              <p class="mt-4 text-base text-ink/70 leading-relaxed">
+                Duerow Exterior Primer has been manufactured far above grade masonary surface where a high performance primer is needed.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- Product 6 -->
+          <article
+            class="group bg-white rounded-lg overflow-hidden shadow-lg border border-navy-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            data-reveal>
+
+            <div class="h-64 bg-navy-800 overflow-hidden relative">
+              <img src="images/epoxy_Grout_Kit.jpeg"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="">
+            </div>
+
+            <div class="p-8">
+
+              <h3 class="font-display text-2xl font-semibold text-ink">
+                Duerow Epoxy Grout
+              </h3>
+
+              <p class="mt-4 text-base text-ink/70 leading-relaxed">
+                Premium epoxy grout for residential, commercial and industrial tile joints.
+              </p>
+
+              <div class="mt-6 rounded-xl bg-gray-50 border border-gray-200 p-5">
+
+                <h4 class="text-lg font-semibold mb-4">
+                  Product Features
+                </h4>
+
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li>✔ Durable</li>
+                  <li>✔ 100% Solid</li>
+                  <li>✔ Easy to Clean</li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VIDEO CAROUSEL ===================== -->
+    <section class="py-16 sm:py-24 hero-splash" data-reveal>
+      <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-10 text-center mb-12">
+        <p class="font-semibold text-xs tracking-[0.2em] uppercase text-brand-300 mb-4">Behind the Range</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">How every product comes together</h2>
+      </div>
+      <div class="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div
+          class="carousel video-carousel carousel--dark relative rounded-[1.75rem] overflow-hidden select-none bg-white/5 border border-white/10 backdrop-blur"
+          data-autoplay="false" data-start="2">
+          <div class="carousel-track" data-carousel-track>
+            <div class="carousel-slide">
+              <video class="w-full aspect-video bg-black" controls muted preload="none">
+                <source src="videos/paint_vid1.mp4" type="video/mp4" />Your browser does not support embedded videos.
+              </video>
+              <div class="flex items-center gap-2 px-5 py-4"><span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                <p class="text-white/80 text-sm font-semibold uppercase tracking-wide">Company Introduction</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <video class="w-full aspect-video bg-black" controls muted preload="none">
+                <source src="videos/paint_vid2.mp4" type="video/mp4" />Your browser does not support embedded videos.
+              </video>
+              <div class="flex items-center gap-2 px-5 py-4"><span class="h-1.5 w-1.5 rounded-full bg-clay"></span>
+                <p class="text-white/80 text-sm font-semibold uppercase tracking-wide">Manufacturing Process</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <video class="w-full aspect-video bg-black" controls muted preload="none">
+                <source src="videos/paint_vid3.mp4" type="video/mp4" />Your browser does not support embedded videos.
+              </video>
+              <div class="flex items-center gap-2 px-5 py-4"><span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
+                <p class="text-white/80 text-sm font-semibold uppercase tracking-wide">Products &amp; About Overview</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-prev" data-carousel-prev aria-label="Previous video"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6" />
+            </svg></button>
+          <button class="carousel-next" data-carousel-next aria-label="Next video"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg></button>
+          <div class="carousel-dots" data-carousel-dots></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="py-16">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="rounded-[2rem] bg-brand-600 px-8 py-14 sm:px-14 sm:py-16 text-center shadow-soft" data-reveal>
+          <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">Not sure which product fits your
+            project?</h2>
+          <p class="mt-4 text-white/80 max-w-xl mx-auto">Send us your surface, area and finish preference — our team
+            will recommend the right Duerow Colors system.</p>
+          <a href="contact.html"
+            class="inline-flex mt-8 items-center gap-2 bg-white text-brand-700 px-8 py-3.5 rounded-full font-semibold hover:bg-paper transition-colors">Ask
+            Our Experts</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-900 text-white/70">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div>
+        <span class="font-display text-xl font-bold uppercase tracking-wide text-brand-300">Duerow</span>
+        <p class="mt-4 text-sm leading-relaxed max-w-xs">Duro Colors Private Limited, established in 2007,
+          manufactures paints, primers, putty, tile grout and epoxy coatings in collaboration with Regent Paints Inc.,
+          USA.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Quick Links</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="index.html" class="hover:text-brand-300 transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-brand-300 transition-colors">About Us</a></li>
+          <li><a href="products.html" class="hover:text-brand-300 transition-colors">Products</a></li>
+          <li><a href="contact.html" class="hover:text-brand-300 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Contact Us</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li>Green Square Market, Hisar, Haryana, 125001</li>
+          <li>Mon - Sat, 9:00 AM - 6:00 PM</li>
+          <li>+91 94160-41413</li>
+          <li>duerowpaints@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6">
+      <p class="text-center text-xs text-white/40">© 2026 Duro Colors Private Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-40 h-12 w-12 rounded-full bg-brand-500 text-navy-900 shadow-soft flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

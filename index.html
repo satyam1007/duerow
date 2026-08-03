@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duro Colors Private Limited | Premium Paint Solutions Since 2007</title>
+  <meta name="description"
+    content="Duro Colors Private Limited has manufactured premium paints, primers, putty, tile grout, adhesives and epoxy coatings since 2007, in technical collaboration with Regent Paints Inc., USA." />
+  <meta name="keywords"
+    content="Duerow Colors, premium paints, primers, putty, tile grout, adhesives, epoxy coatings, Regent Paints USA, Hisar Haryana" />
+  <link rel="canonical" href="https://www.duerowcolors.com/" />
+  <meta property="og:title" content="Duro Colors Private Limited | Premium Paint Solutions Since 2007" />
+  <meta property="og:description"
+    content="Premium paints, primers, putty, tile grout, adhesives and epoxy coatings — manufactured with technology from Regent Paints Inc., USA." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="images/logo.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#101728',
+            paper: '#F4F6FA',
+            navy: { 50: '#EEF1F7', 100: '#D7DDEA', 300: '#8592B0', 500: '#2C3B5E', 600: '#1E2A46', 700: '#161F35', 800: '#101728', 900: '#0A0F1C' },
+            brand: { 50: '#E6FBFC', 100: '#C7F5F8', 200: '#96EBF2', 300: '#5FDCE8', 400: '#33C9DA', 500: '#12B8C9', 600: '#0E93A1', 700: '#0B7380', 800: '#0A5A64' },
+            clay: { DEFAULT: '#D9642F', light: '#F2914F', dark: '#A8481E' },
+            gold: '#C99A4E',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 40px -12px rgba(10,15,28,0.35)',
+            card: '0 8px 24px -8px rgba(10,15,28,0.15)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F4F6FA;
+      color: #101728;
+    }
+
+    .font-display {
+      font-family: 'Fraunces', serif;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Hero / page-banner splash background, echoing a splattered paint texture */
+    .hero-splash {
+      background:
+        radial-gradient(circle at 12% 25%, rgba(217, 100, 47, 0.55), transparent 42%),
+        radial-gradient(circle at 82% 20%, rgba(18, 184, 201, 0.5), transparent 45%),
+        radial-gradient(circle at 55% 85%, rgba(201, 154, 78, 0.35), transparent 45%),
+        radial-gradient(circle at 30% 70%, rgba(18, 184, 201, 0.25), transparent 40%),
+        #0A0F1C;
+    }
+
+    #nav-main {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #navbar.scrolled #nav-main {
+      background-color: rgba(10, 15, 28, 0.97);
+      box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    #mobile-menu {
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    [data-reveal].reveal-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .card-hover {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px -15px rgba(10, 15, 28, 0.25);
+    }
+
+    /* ---- Carousel core (shared by image + video variants) ---- */
+    .carousel-track {
+      display: flex;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+
+    .carousel-track:active {
+      cursor: grabbing;
+    }
+
+    .carousel-slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2.75rem;
+      width: 2.75rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(10, 15, 28, 0.08);
+      box-shadow: 0 6px 18px -6px rgba(10, 15, 28, 0.35);
+      transition: background 0.2s ease;
+      z-index: 10;
+    }
+
+    .carousel-prev:hover,
+    .carousel-next:hover {
+      background: #fff;
+    }
+
+    .carousel-prev {
+      left: 1rem;
+    }
+
+    .carousel-next {
+      right: 1rem;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+
+    .carousel-dot {
+      height: 0.55rem;
+      width: 0.55rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(10, 15, 28, 0.15);
+      transition: width 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      width: 1.5rem;
+      background: #0E93A1;
+      border-color: #0E93A1;
+    }
+
+    /* Dark variant used for the video carousel — visually distinct component */
+    .carousel--dark .carousel-prev,
+    .carousel--dark .carousel-next {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .carousel--dark .carousel-prev:hover,
+    .carousel--dark .carousel-next:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .carousel--dark .carousel-prev svg,
+    .carousel--dark .carousel-next svg {
+      stroke: #fff;
+    }
+
+    .carousel--dark .carousel-dot {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .carousel--dark .carousel-dot.active {
+      background: #33C9DA;
+      border-color: #33C9DA;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-brand-600 text-white px-4 py-2 rounded-md z-50">Skip
+    to content</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-40">
+    <div class="hidden sm:block bg-navy-900 text-white/70 text-xs">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-9 flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="mailto:duerowpaints@gmail.com"
+            class="flex items-center gap-1.5 hover:text-brand-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-10 6L2 7" />
+            </svg>
+            duerowpaints@gmail.com
+          </a>
+          <a href="tel:+919416041413" class="flex items-center gap-1.5 hover:text-brand-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            +91 94160-41413
+          </a>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          Mon - Sat | 9:00 AM - 6:00 PM
+        </div>
+      </div>
+    </div>
+
+    <nav id="nav-main" class="bg-navy-900/90 backdrop-blur border-b border-white/5" aria-label="Primary">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo.png" alt="Duerow Logo"
+            class="h-24 sm:h-24 md:h-32 lg:h-32 xl:h-48 w-auto object-contain" />
+        </a>
+
+        <ul class="hidden md:flex items-center gap-9 font-semibold text-xs tracking-widest uppercase text-white/75">
+          <li><a href="index.html" class="nav-link hover:text-brand-300 transition-colors" data-page="index">Home</a>
+          </li>
+          <li><a href="about.html" class="nav-link hover:text-brand-300 transition-colors" data-page="about">About
+              Us</a></li>
+          <li><a href="products.html" class="nav-link hover:text-brand-300 transition-colors"
+              data-page="products">Products</a></li>
+          <li><a href="contact.html" class="nav-link hover:text-brand-300 transition-colors"
+              data-page="contact">Contact</a></li>
+        </ul>
+
+        <a href="contact.html"
+          class="hidden md:inline-flex items-center gap-2 bg-brand-500 text-navy-900 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-400 transition-colors">
+          Get a Quote
+        </a>
+
+        <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"
+          class="md:hidden relative h-10 w-10 flex flex-col items-center justify-center gap-1.5 rounded-full border border-white/20">
+          <span class="hamburger-line block h-0.5 w-5 bg-white transition-transform"></span>
+          <span class="hamburger-line block h-0.5 w-5 bg-white transition-opacity"></span>
+          <span class="hamburger-line block h-0.5 w-5 bg-white transition-transform"></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu"
+        class="md:hidden max-h-0 opacity-0 overflow-hidden bg-navy-800/98 backdrop-blur-md border-t border-white/10">
+        <ul class="flex flex-col gap-1 px-6 py-4 font-semibold text-sm uppercase tracking-wide text-white/85">
+          <li><a href="index.html" class="block py-3 border-b border-white/10">Home</a></li>
+          <li><a href="about.html" class="block py-3 border-b border-white/10">About Us</a></li>
+          <li><a href="products.html" class="block py-3 border-b border-white/10">Products</a></li>
+          <li><a href="contact.html" class="block py-3">Contact</a></li>
+        </ul>
+        <div class="px-6 pb-6">
+          <a href="contact.html"
+            class="block text-center bg-brand-500 text-navy-900 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-widest">Get
+            a Quote</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="pt-20 sm:pt-[116px]">
+    <!-- ===================== IMAGE CAROUSEL BANNER ===================== -->
+    <section class="bg-navy-800 py-6">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-center items-center min-h-[40vh]">
+          <img src="images/homepage_img.png" alt="Duerow Paint Products"
+            class="max-w-full max-h-[70vh] w-auto h-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPANY INTRODUCTION ===================== -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 grid lg:grid-cols-2 gap-14 items-center">
+        <div data-reveal>
+          <p class="font-semibold text-xs tracking-[0.2em] uppercase text-brand-600 mb-4">Since 2007</p>
+          <h1 class="font-display text-3xl sm:text-4xl font-semibold text-ink leading-tight mb-6">Premium Paint
+            Solutions Since 2007</h1>
+          <p class="text-ink/70 leading-relaxed text-[17px]">
+            Duro Colors Private Limited has been manufacturing premium paints, primers, putty, tile grout, adhesives,
+            and epoxy coatings with advanced technology from Regent Paints Inc., USA.
+          </p>
+          <p class="mt-4 text-ink/70 leading-relaxed text-[17px]">
+            Since 2007, Duro Colors Private Limited has been manufacturing high-quality paints, primers, putty,
+            cement-based paints, tile grout, adhesive, and epoxy coatings. Since April 25, 2018, we have been in
+            technical collaboration with Regent Paints Inc., USA.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="products.html"
+              class="inline-flex items-center gap-2 bg-brand-600 text-white px-7 py-3.5 rounded-full font-semibold shadow-soft hover:bg-brand-700 transition-colors">Explore
+              Products</a>
+            <a href="contact.html"
+              class="inline-flex items-center gap-2 border border-ink/20 text-ink px-7 py-3.5 rounded-full font-semibold hover:border-ink/40 transition-colors">Contact
+              Us</a>
+          </div>
+
+          <div class="mt-10 grid sm:grid-cols-2 gap-5">
+            <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+              <span
+                class="inline-flex h-10 w-10 rounded-lg bg-brand-100 items-center justify-center text-brand-700 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </span>
+              <h3 class="font-display font-semibold text-ink mb-1.5">Technology &amp; Guidance</h3>
+              <p class="text-sm text-ink/60 leading-relaxed">Regent Paints Inc. guides Duro Colors in formulation,
+                technology upgrades, and marketing.</p>
+            </div>
+            <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+              <span class="inline-flex h-10 w-10 rounded-lg bg-clay/10 items-center justify-center text-clay mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                  <path d="M4 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                </svg>
+              </span>
+              <h3 class="font-display font-semibold text-ink mb-1.5">Authorized Partner</h3>
+              <p class="text-sm text-ink/60 leading-relaxed">Duro Colors Pvt. Ltd. is authorized to repackage and
+                relabel Regent Paints products for distribution.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative" data-reveal>
+          <div
+            class="rounded-[2rem] overflow-hidden shadow-soft bg-navy-800 aspect-[4/5] flex items-center justify-center p-10">
+            <img src="images/since_img.png" alt="Duerow Eco Emulsion premium paint bucket"
+              class="max-h-full object-contain" loading="lazy" width="871" height="1280" />
+          </div>
+          <div
+            class="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 bg-white rounded-2xl shadow-card px-6 py-4">
+            <span class="h-2.5 w-2.5 rounded-full bg-brand-500"></span>
+            <p class="text-xs font-semibold uppercase tracking-wide text-ink/70">Technical Collaboration Since 2018</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VIDEO CAROUSEL (distinct dark component) ===================== -->
+    <section class="py-16 sm:py-24 hero-splash" data-reveal>
+      <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-10 text-center mb-12">
+        <p class="font-semibold text-xs tracking-[0.2em] uppercase text-brand-300 mb-4">Watch</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">Duro Colors, in motion</h2>
+        <p class="mt-4 text-white/60 max-w-2xl mx-auto">Our company introduction, manufacturing process, and product
+          overview.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div
+          class="carousel video-carousel carousel--dark relative rounded-[1.75rem] overflow-hidden select-none bg-white/5 border border-white/10 backdrop-blur"
+          data-autoplay="false" data-start="0">
+          <div class="carousel-track" data-carousel-track>
+            <div class="carousel-slide">
+              <video class="w-full aspect-video bg-black" controls muted preload="none">
+                <source src="videos/paint_vid1.mp4" type="video/mp4" />
+                Your browser does not support embedded videos.
+              </video>
+              <div class="flex items-center gap-2 px-5 py-4">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                <p class="text-white/80 text-sm font-semibold uppercase tracking-wide">Company Introduction</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <video class="w-full aspect-video bg-black" controls muted preload="none">
+                <source src="videos/paint_vid2.mp4" type="video/mp4" />
+                Your browser does not support embedded videos.
+              </video>
+              <div class="flex items-center gap-2 px-5 py-4">
+                <span class="h-1.5 w-1.5 rounded-full bg-clay"></span>
+                <p class="text-white/80 text-sm font-semibold uppercase tracking-wide">Manufacturing Process</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <video class="w-full aspect-video bg-black" controls muted preload="none">
+                <source src="videos/paint_vid3.mp4" type="video/mp4" />
+                Your browser does not support embedded videos.
+              </video>
+              <div class="flex items-center gap-2 px-5 py-4">
+                <span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
+                <p class="text-white/80 text-sm font-semibold uppercase tracking-wide">Products &amp; About Overview</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-prev" data-carousel-prev aria-label="Previous video"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6" />
+            </svg></button>
+          <button class="carousel-next" data-carousel-next aria-label="Next video"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg></button>
+          <div class="carousel-dots" data-carousel-dots></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY PEOPLE CHOOSE US ===================== -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+          <h2 class="font-display text-3xl sm:text-4xl font-semibold text-ink">WHY PEOPLE CHOOSE US</h2>
+          <div class="h-1 w-14 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div class="card-hover bg-white rounded-2xl p-7 shadow-card border border-navy-100" data-reveal>
+            <span class="inline-flex h-11 w-11 rounded-xl bg-red-100 items-center justify-center text-red-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Satisfaction Assurance</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">The company assures maximum satisfaction in application,
+              appearance and performance.</p>
+          </div>
+          <div class="card-hover bg-white rounded-2xl p-7 shadow-card border border-navy-100" data-reveal>
+            <span
+              class="inline-flex h-11 w-11 rounded-xl bg-yellow-100 items-center justify-center text-yellow-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5" />
+                <path
+                  d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+              </svg>
+            </span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Weather Protection</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">Protects against sunlight, moisture, stains and dirt.</p>
+          </div>
+          <div class="card-hover bg-white rounded-2xl p-7 shadow-card border border-navy-100" data-reveal>
+            <span class="inline-flex h-11 w-11 rounded-xl bg-blue-100 items-center justify-center text-blue-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2s7 8.5 7 13a7 7 0 1 1-14 0c0-4.5 7-13 7-13z" />
+              </svg>
+            </span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Dirt &amp; Water Resistant</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">Easy to clean and resistant to discoloration.</p>
+          </div>
+          <div class="card-hover bg-white rounded-2xl p-7 shadow-card border border-navy-100" data-reveal>
+            <span class="inline-flex h-11 w-11 rounded-xl bg-green-100 items-center justify-center text-green-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 4 13c0-4 3-9 8-11 5 2 8 7 8 11a7 7 0 0 1-7 7z" />
+              </svg>
+            </span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">LOW VOC</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">Environment-friendly products with premium quality.</p>
+          </div>
+          <div class="card-hover bg-white rounded-2xl p-7 shadow-card border border-navy-100" data-reveal>
+            <span
+              class="inline-flex h-11 w-11 rounded-xl bg-orange-100 items-center justify-center text-orange-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <path d="M9 22V12h6v10" />
+              </svg>
+            </span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Moisture Resistant</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">Ideal for kitchens, bathrooms and exterior walls.</p>
+          </div>
+          <div class="card-hover bg-white rounded-2xl p-7 shadow-card border border-navy-100" data-reveal>
+            <span class="inline-flex h-11 w-11 rounded-xl bg-brand-100 items-center justify-center text-brand-700 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Easy To Clean</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">Resists common household stains and marks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-900 text-white/70">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div>
+        <span class="font-display text-xl font-bold uppercase tracking-wide text-brand-300">Duerow</span>
+        <p class="mt-4 text-sm leading-relaxed max-w-xs">Duro Colors Private Limited, established in 2007,
+          manufactures paints, primers, putty, tile grout and epoxy coatings in collaboration with Regent Paints Inc.,
+          USA.</p>
+        <div class="flex items-center gap-3 mt-5">
+          <a href="#" aria-label="Facebook"
+            class="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-500 hover:text-navy-900 transition-colors"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6v1.9H16l-.4 2.9h-2.1v7A10 10 0 0 0 22 12z" />
+            </svg></a>
+          <a href="#" aria-label="Instagram"
+            class="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-500 hover:text-navy-900 transition-colors"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" />
+            </svg></a>
+          <a href="#" aria-label="Twitter"
+            class="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-500 hover:text-navy-900 transition-colors"><svg
+              xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.2 4.2 0 0 1-1.8.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z" />
+            </svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Quick Links</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="index.html" class="hover:text-brand-300 transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-brand-300 transition-colors">About Us</a></li>
+          <li><a href="products.html" class="hover:text-brand-300 transition-colors">Products</a></li>
+          <li><a href="contact.html" class="hover:text-brand-300 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white mb-4 text-sm uppercase tracking-wide">Contact Us</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li>Green Square Market, Hisar, Haryana, 125001</li>
+          <li>Mon - Sat, 9:00 AM - 6:00 PM</li>
+          <li>+91 94160-41413</li>
+          <li>duerowpaints@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6">
+      <p class="text-center text-xs text-white/40">© 2026 Duro Colors Private Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-40 h-12 w-12 rounded-full bg-brand-500 text-navy-900 shadow-soft flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
